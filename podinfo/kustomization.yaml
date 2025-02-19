@@ -6,6 +6,7 @@ metadata:
 spec:
   interval: 5m
   path: ./podinfo
-  gitRepositoryRef:
+  sourceRef:
+    kind: GitRepository
     name: flux-k8s-deployment
   prune: true
