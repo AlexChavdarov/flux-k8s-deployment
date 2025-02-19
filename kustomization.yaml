@@ -10,3 +10,9 @@ spec:
     kind: GitRepository
     name: flux-k8s-deployment
   prune: true
+  resources:
+    - ./podinfo/deployment.yaml
+    - ./podinfo/podinfo-deployment.yaml
+    - ./podinfo/flux-kustomization.yaml
+    - ./podinfo/service.yaml
+    - ./podinfo/podinfo.yaml
