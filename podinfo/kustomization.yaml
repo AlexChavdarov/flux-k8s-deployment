@@ -4,10 +4,9 @@ metadata:
   name: podinfo
   namespace: default
 spec:
-  sources:
-    - kind: GitRepository
-      name: flux-k8s-deployment
-      interval: 1m
-  path: ./podinfo
-  prune: true
   interval: 5m
+  path: ./podinfo
+  git:
+    repoURL: https://github.com/AlexChavdarov/flux-k8s-deployment
+    branch: main
+  prune: true
