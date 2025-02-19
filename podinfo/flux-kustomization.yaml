@@ -1,0 +1,13 @@
+apiVersion: fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: podinfo-deployment
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./podinfo
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-repo
+  targetNamespace: default
