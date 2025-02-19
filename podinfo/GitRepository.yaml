@@ -7,6 +7,6 @@ spec:
   interval: 1m
   url: https://github.com/AlexChavdarov/podinfo-repo.git
   ref:
-    branch: main  # Указваме, че искаме да използваме "main" клона
+    branch: main 
   secretRef:
     name: flux-git-auth

@@ -1,17 +1,11 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: podinfo
-  namespace: default
+  namespace: flux-system
 spec:
-  interval: 5m
-  path: ./podinfo
+  path: "podinfo"
   sourceRef:
     kind: GitRepository
-    name: flux-k8s-deployment
-  prune: true
-  resources:
-    - ./podinfo/deployment.yaml
-    - ./podinfo/podinfo-deployment.yaml
-    - ./podinfo/service.yaml
-    - ./podinfo/podinfo.yaml
+    name: podinfo-repo
+  interval: 10m
