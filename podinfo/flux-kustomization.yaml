@@ -4,7 +4,7 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  path: ./podinfo
+  path: podinfo
   sourceRef:
     kind: GitRepository
     name: podinfo-repo
