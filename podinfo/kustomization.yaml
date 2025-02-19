@@ -4,12 +4,10 @@ metadata:
   name: podinfo
   namespace: default
 spec:
-  resources:
-    - podinfo/podinfo.yaml
-    - podinfo/deployment.yaml
-    - podinfo/service.yaml
+  sources:
+    - kind: GitRepository
+      name: flux-k8s-deployment
+      interval: 1m
+  path: ./podinfo
+  prune: true
   interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: flux-k8s-deployment
-    namespace: flux-system
