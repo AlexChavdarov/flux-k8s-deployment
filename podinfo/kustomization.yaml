@@ -6,7 +6,6 @@ metadata:
 spec:
   interval: 5m
   path: ./podinfo
-  git:
-    repoURL: https://github.com/AlexChavdarov/flux-k8s-deployment
-    branch: main
+  gitRepositoryRef:
+    name: flux-k8s-deployment
   prune: true
