@@ -5,8 +5,9 @@ metadata:
   namespace: default
 spec:
   interval: 5m
-  path: ./podinfo  # Пътят трябва да сочи към папката, в която се намират ресурсите
+  path: ./podinfo
   sourceRef:
     kind: GitRepository
     name: flux-k8s-deployment
   prune: true
+
