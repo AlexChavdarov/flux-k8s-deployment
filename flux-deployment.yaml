@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m
-  path: ./deploy
+  path: ./podinfo
   prune: true
   sourceRef:
     kind: GitRepository
