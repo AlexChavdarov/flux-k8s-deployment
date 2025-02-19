@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: podinfo-config
+data:
+  APP_MODE: "production"
+  ENV: "prod"
