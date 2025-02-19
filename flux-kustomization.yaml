@@ -1,0 +1,19 @@
+apiVersion: fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: podinfo
+  namespace: default
+spec:
+  path: "./podinfo"   # Път към папката, където се намират ресурсите
+  prune: true
+  validation: client
+  interval: 5m
+  sourceRef:
+    kind: GitRepository
+    name: podinfo-repo  # Името на GitRepository ресурса
+  targetNamespace: default
+  resources:
+    - deployment.yaml
+    - service.yaml
+    - podinfo.yaml
+    - kustomization.yaml
