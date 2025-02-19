@@ -1,4 +1,4 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
 kind: Kustomization
 metadata:
   name: podinfo
@@ -8,7 +8,4 @@ spec:
     - podinfo/podinfo.yaml
     - podinfo/deployment.yaml
     - podinfo/service.yaml
-  git:
-    repoURL: https://github.com/AlexChavdarov/flux-k8s-deployment
-    branch: main
   interval: 5m
