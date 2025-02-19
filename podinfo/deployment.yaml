@@ -2,10 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo
-  labels:
-    app: podinfo
+  namespace: default  # Тук се добавя namespace, например "default"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: podinfo
@@ -16,6 +15,6 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: ghcr.io/fluxcd/podinfo:latest
+        image: quay.io/stefanprodan/podinfo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 9898

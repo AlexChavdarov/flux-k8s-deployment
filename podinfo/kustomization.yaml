@@ -13,6 +13,5 @@ spec:
   resources:
     - ./podinfo/deployment.yaml
     - ./podinfo/podinfo-deployment.yaml
-    - ./podinfo/flux-kustomization.yaml
     - ./podinfo/service.yaml
     - ./podinfo/podinfo.yaml
